@@ -7,25 +7,48 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplication.R
+import com.example.myapplication.data.SportsList.Companion.sportsList
 import com.example.myapplication.databinding.FragmentDashboardBinding
+import com.example.myapplication.databinding.FragmentSportsBinding
+import com.example.myapplication.model.SportsModel
+import com.example.myapplication.recyclerview.viewholder.adapter.SportsAdapter
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class SportsFragment : Fragment() {
 
-    private var _binding: FragmentDashboardBinding? = null
+    private var _binding: FragmentSportsBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
 
+
+
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var adapter: SportsAdapter
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
-
-        _binding = FragmentDashboardBinding.inflate(inflater, container, false)
+        _binding = FragmentSportsBinding.inflate(inflater, container, false)
         val root: View = binding.root
+
+        val floatingActionButton: FloatingActionButton = binding.fab
+
+        floatingActionButton.setOnClickListener(View.OnClickListener {
+            val addSportDialog = AddSportDialogFragment()
+            addSportDialog.show(requireActivity().supportFragmentManager, "AddSportDialog")
+        })
+
+        recyclerView = binding.recyclerView
+        adapter = SportsAdapter(sportsList)
+        recyclerView.adapter = adapter
+        recyclerView.layoutManager = GridLayoutManager(context, 2, GridLayoutManager.VERTICAL, false)
+
 
         return root
     }

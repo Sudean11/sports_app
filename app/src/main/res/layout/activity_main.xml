@@ -13,6 +13,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
         <!-- Tab layout -->
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
@@ -28,8 +33,11 @@
             android:id="@+id/viewPager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/tabLayout" />
+            app:layout_constraintTop_toBottomOf="@id/tabLayout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
 
+        </LinearLayout>
         <!-- Bottom navigation view -->
 
 
@@ -43,9 +51,9 @@
             app:layout_constraintRight_toRightOf="parent"
             app:menu="@menu/bottom_nav_menu" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- Navigation drawer view -->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </LinearLayout>

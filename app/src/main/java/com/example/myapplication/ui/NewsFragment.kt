@@ -7,11 +7,17 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplication.data.NewsList.Companion.newsList
 import com.example.myapplication.databinding.FragmentDashboardBinding
+import com.example.myapplication.databinding.FragmentNewsBinding
+import com.example.myapplication.recyclerview.viewholder.adapter.NewsAdapter
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class NewsFragment : Fragment() {
 
-    private var _binding: FragmentDashboardBinding? = null
+    private var _binding: FragmentNewsBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -24,8 +30,13 @@ class NewsFragment : Fragment() {
     ): View {
 
 
-        _binding = FragmentDashboardBinding.inflate(inflater, container, false)
+        _binding = FragmentNewsBinding.inflate(inflater, container, false)
         val root: View = binding.root
+
+        val recyclerView: RecyclerView = binding.recyclerViewNews
+        val adapter = NewsAdapter(newsList)
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        recyclerView.adapter = adapter
 
         return root
     }
