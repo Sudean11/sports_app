@@ -4,16 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.myapplication.R
 import com.example.myapplication.data.SportsList.Companion.sportsList
-import com.example.myapplication.databinding.FragmentDashboardBinding
 import com.example.myapplication.databinding.FragmentSportsBinding
-import com.example.myapplication.model.SportsModel
+import com.example.myapplication.dialog.AddSportDialogFragment
 import com.example.myapplication.recyclerview.viewholder.adapter.SportsAdapter
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 

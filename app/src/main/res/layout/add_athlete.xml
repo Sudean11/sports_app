@@ -11,12 +11,12 @@
         android:id="@+id/textTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add New News"
+        android:text="Add New Athlete"
         android:textSize="20sp"
         android:gravity="center"
         android:padding="16dp"/>
 
-    <!-- News Image URL CardView -->
+    <!-- Name CardView -->
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -24,15 +24,15 @@
         android:layout_margin="16dp">
 
         <EditText
-            android:id="@+id/editTextNewsImageUrl"
+            android:id="@+id/editTextAthleteName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="News Image URL"
+            android:hint="Athlete Name"
             android:background="@android:color/transparent"
             android:padding="8dp"/>
     </androidx.cardview.widget.CardView>
 
-    <!-- News Title CardView -->
+    <!-- Sport CardView -->
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -40,15 +40,15 @@
         android:layout_margin="16dp">
 
         <EditText
-            android:id="@+id/editTextNewsTitle"
+            android:id="@+id/editTextAthleteSport"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="News Title"
+            android:hint="Athlete Sport"
             android:background="@android:color/transparent"
             android:padding="8dp"/>
     </androidx.cardview.widget.CardView>
 
-    <!-- News Description CardView -->
+    <!-- Country CardView -->
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -56,16 +56,44 @@
         android:layout_margin="16dp">
 
         <EditText
-            android:id="@+id/editTextNewsDescription"
+            android:id="@+id/editTextAthleteCountry"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="News Description"
-            android:padding="8dp"
-            android:gravity="start|top"
+            android:hint="Athlete Country"
             android:background="@android:color/transparent"
-            android:lines="5"
-            android:minLines="3"
-            android:scrollbars="vertical"/>
+            android:padding="8dp"/>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Personal Best CardView -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_view_border"
+        android:layout_margin="16dp">
+
+        <EditText
+            android:id="@+id/editTextPersonalBest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Personal Best"
+            android:background="@android:color/transparent"
+            android:padding="8dp"/>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Facts CardView -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_view_border"
+        android:layout_margin="16dp">
+
+        <EditText
+            android:id="@+id/editTextFacts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Facts"
+            android:background="@android:color/transparent"
+            android:padding="8dp"/>
     </androidx.cardview.widget.CardView>
 
     <!-- Buttons -->
@@ -77,7 +105,7 @@
 
         <!-- Cancel Button -->
         <Button
-            android:id="@+id/btnCancelNews"
+            android:id="@+id/btnCancelAthlete"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -85,7 +113,7 @@
 
         <!-- Add Button -->
         <Button
-            android:id="@+id/btnAddNews"
+            android:id="@+id/btnAddAthlete"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
