@@ -7,14 +7,21 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplication.data.AthletesList
+import com.example.myapplication.data.EventList
 import com.example.myapplication.databinding.FragmentDashboardBinding
+import com.example.myapplication.databinding.FragmentNewsBinding
+import com.example.myapplication.dialog.AddAthleteDialogFragment
+import com.example.myapplication.dialog.AddEventDialog
+import com.example.myapplication.recyclerview.viewholder.adapter.AthletesAdapter
+import com.example.myapplication.recyclerview.viewholder.adapter.EventAdapter
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class EventsFragment : Fragment() {
 
-    private var _binding: FragmentDashboardBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
+    private var _binding: FragmentNewsBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -24,8 +31,21 @@ class EventsFragment : Fragment() {
     ): View {
 
 
-        _binding = FragmentDashboardBinding.inflate(inflater, container, false)
+
+        _binding = FragmentNewsBinding.inflate(inflater, container, false)
         val root: View = binding.root
+
+        val recyclerView: RecyclerView = binding.recyclerViewNews
+        val adapter = EventAdapter(EventList.eventList)
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        recyclerView.adapter = adapter
+
+        val floatingActionButton: FloatingActionButton = binding.fabNewNews
+
+        floatingActionButton.setOnClickListener(View.OnClickListener {
+            val addSportDialog = AddEventDialog()
+            addSportDialog.show(requireActivity().supportFragmentManager, "AddEventsDialog")
+        })
 
         return root
     }
