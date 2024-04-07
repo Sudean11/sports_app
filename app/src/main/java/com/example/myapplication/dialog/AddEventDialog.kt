@@ -5,21 +5,18 @@ import android.app.Dialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
-import android.widget.Button
 import android.widget.DatePicker
 import android.widget.EditText
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
 import com.example.myapplication.R
-import com.example.myapplication.data.AthletesList
 import com.example.myapplication.data.EventList
-import com.example.myapplication.model.AthletesModel
 import com.example.myapplication.model.EventModel
+import com.example.myapplication.recyclerview.viewholder.adapter.EventAdapter
 import java.util.Calendar
 
-class AddEventDialog: DialogFragment() {
+class AddEventDialog(private val adapter: EventAdapter) : DialogFragment() {
     private lateinit var dateSetListener: DatePickerDialog.OnDateSetListener
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
@@ -95,6 +92,7 @@ class AddEventDialog: DialogFragment() {
             val athleteSport = editTextAthleteSport.text.toString()
             val athleteCountry = editTextAthleteCountry.text.toString()
             EventList.eventList.add(EventModel(athleteName, athleteSport, athleteCountry))
+            adapter.notifyDataSetChanged()
             dismiss()
         }
 
