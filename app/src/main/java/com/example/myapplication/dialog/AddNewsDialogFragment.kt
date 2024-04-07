@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.FragmentManager
@@ -26,9 +27,8 @@ class AddNewsDialogFragment : DialogFragment() {
         val editTextNewsTitle = view.findViewById<EditText>(R.id.editTextNewsTitle)
         val editTextNewsImageUrl = view.findViewById<EditText>(R.id.editTextNewsImageUrl)
         val editTextNewsDescription =view.findViewById<EditText>(R.id.editTextNewsDescription)
-
-        val btnCancel = view.findViewById<Button>(R.id.btnCancelNews)
-        val btnAdd = view.findViewById<Button>(R.id.btnAddNews)
+        val btnCancel = view.findViewById<TextView>(R.id.news_btn_cancel)
+        val btnAdd = view.findViewById<TextView>(R.id.news_btn_add)
 
         // Set click listener for cancel button
         btnCancel.setOnClickListener {

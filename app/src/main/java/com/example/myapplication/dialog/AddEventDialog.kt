@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.DatePicker
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
@@ -29,9 +30,10 @@ class AddEventDialog: DialogFragment() {
         val editTextAthleteName = view.findViewById<EditText>(R.id.event_name)
         val editTextAthleteSport = view.findViewById<EditText>(R.id.event_date)
         val editTextAthleteCountry = view.findViewById<EditText>(R.id.event_description)
+        val btnCancelAthlete = view.findViewById<TextView>(R.id.event_btn_cancel)
+        val btnAddAthlete = view.findViewById<TextView>(R.id.events_btn_add)
 
-        val btnCancelAthlete = view.findViewById<Button>(R.id.btnCancelAthlete)
-        val btnAddAthlete = view.findViewById<Button>(R.id.btnAddAthlete)
+
 
         dateSetListener = DatePickerDialog.OnDateSetListener { _: DatePicker, year: Int, month: Int, dayOfMonth: Int ->
             // Update the selected date text view when the user selects a date

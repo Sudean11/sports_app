@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <!-- Title -->
@@ -16,11 +17,19 @@
         android:gravity="left"
         android:padding="16dp"/>
 
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_marginLeft="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <!-- Sports name CardView -->
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/card_view_border"
+        android:elevation="0dp"
+        app:cardUseCompatPadding="true"
         android:layout_margin="16dp">
 
         <EditText
@@ -45,7 +54,7 @@
             android:layout_height="wrap_content"
             android:hint="Instructions"
             android:padding="8dp"
-            android:gravity="start|top"
+            android:gravity="start|center"
             android:background="@android:color/transparent"
             android:lines="5"
             android:minLines="3"
@@ -56,22 +65,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_gravity="right"
+        android:gravity="right"
+        android:layout_marginBottom="15dp"
         android:layout_marginTop="16dp">
 
-        <!-- Cancel Button -->
-        <Button
-            android:id="@+id/btnCancel"
-            android:layout_width="0dp"
+        <TextView
+            android:id="@+id/sports_btn_cancel"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_marginRight="30dp"
+            android:textSize="18dp"
             android:text="Cancel"/>
 
-        <!-- Add Button -->
-        <Button
-            android:id="@+id/btnAdd"
-            android:layout_width="0dp"
+        <TextView
+            android:id="@+id/sports_btn_add"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:textSize="18dp"
+            android:layout_marginRight="20dp"
             android:text="Add"/>
 
     </LinearLayout>

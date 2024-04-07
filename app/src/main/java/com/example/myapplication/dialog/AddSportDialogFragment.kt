@@ -3,8 +3,11 @@ package com.example.myapplication.dialog
 import android.app.Dialog
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Spinner
+import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
 import com.example.myapplication.R
@@ -20,9 +23,18 @@ class AddSportDialogFragment : DialogFragment() {
         // Initialize views
         val editTextSportName = view.findViewById<EditText>(R.id.editTextSportName)
         val editTextInstructions = view.findViewById<EditText>(R.id.editTextInstructions)
-        val btnCancel = view.findViewById<Button>(R.id.btnCancel)
-        val btnAdd = view.findViewById<Button>(R.id.btnAdd)
+        val btnCancel = view.findViewById<TextView>(R.id.sports_btn_cancel)
+        val btnAdd = view.findViewById<TextView>(R.id.sports_btn_add)
 
+        val items = listOf("Measure", "Precision", "Spectacle", "Combat", "Play")
+        val spinner: Spinner = view.findViewById(R.id.spinner)
+        val adapter = ArrayAdapter(
+            requireContext(),
+            android.R.layout.simple_spinner_item,
+            items
+        )
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spinner.adapter = adapter
         // Set click listener for cancel button
         btnCancel.setOnClickListener {
             dismiss()

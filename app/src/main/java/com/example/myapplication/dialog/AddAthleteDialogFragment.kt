@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
 import com.example.myapplication.R
@@ -25,8 +26,8 @@ class AddAthleteDialogFragment: DialogFragment() {
         val editTextPersonalBest = view.findViewById<EditText>(R.id.editTextPersonalBest)
         val editTextFacts = view.findViewById<EditText>(R.id.editTextFacts)
 
-        val btnCancelAthlete = view.findViewById<Button>(R.id.btnCancelAthlete)
-        val btnAddAthlete = view.findViewById<Button>(R.id.btnAddAthlete)
+        val btnCancelAthlete = view.findViewById<TextView>(R.id.athlete_btn_cancel)
+        val btnAddAthlete = view.findViewById<TextView>(R.id.athlete_btn_add)
 
 
         // Set click listener for cancel button

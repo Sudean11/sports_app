@@ -69,24 +69,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_gravity="right"
+        android:gravity="right"
+        android:layout_marginBottom="15dp"
         android:layout_marginTop="16dp">
 
-        <!-- Cancel Button -->
-        <Button
-            android:id="@+id/btnCancelAthlete"
-            android:layout_width="0dp"
+        <TextView
+            android:id="@+id/historical_btn_cancel"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_marginRight="30dp"
+            android:textSize="18dp"
             android:text="Cancel"/>
 
-        <!-- Add Button -->
-        <Button
-            android:id="@+id/btnAddAthlete"
-            android:layout_width="0dp"
+        <TextView
+            android:id="@+id/historical_btn_add"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:textSize="18dp"
+            android:layout_marginRight="20dp"
             android:text="Add"/>
 
     </LinearLayout>
+
 
 </LinearLayout>

@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
 import com.example.myapplication.R
@@ -22,9 +23,8 @@ class AddHistoricalArchivesDialog: DialogFragment() {
         val editTextAthleteName = view.findViewById<EditText>(R.id.editTextAthleteName)
         val editTextAthleteSport = view.findViewById<EditText>(R.id.editTextAthleteSport)
         val editTextAthleteCountry = view.findViewById<EditText>(R.id.editTextAthleteCountry)
-
-        val btnCancelAthlete = view.findViewById<Button>(R.id.btnCancelAthlete)
-        val btnAddAthlete = view.findViewById<Button>(R.id.btnAddAthlete)
+        val btnCancelAthlete = view.findViewById<TextView>(R.id.historical_btn_cancel)
+        val btnAddAthlete = view.findViewById<TextView>(R.id.historical_btn_add)
 
 
         // Set click listener for cancel button
