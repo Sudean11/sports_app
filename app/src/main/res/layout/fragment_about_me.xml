@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    android:layout_marginLeft="10dp"
     android:layout_height="match_parent"
     >
     <ImageView
@@ -20,10 +19,13 @@
         android:id="@+id/textViewName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
         android:text="Your Name"
-        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textSize="20dp"
         android:gravity="left"
         android:layout_gravity="left"
+
         android:textStyle="bold"
         android:layout_below="@id/imageViewProfile"
         android:layout_centerHorizontal="true"
@@ -33,6 +35,8 @@
     <TextView
         android:id="@+id/textViewAboutMe"
         android:layout_gravity="left"
+        android:layout_marginLeft="20dp"
+        android:textSize="18dp"
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

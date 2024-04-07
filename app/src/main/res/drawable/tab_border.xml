@@ -1,0 +1,8 @@
+<!-- res/drawable/tab_layout_border.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <stroke
+        android:width="1dp"
+        android:color="#CCCCCC"/> <!-- Border color set to grey -->
+    <corners android:radius="8dp"/> <!-- Adjust corner radius as needed -->
+</shape>

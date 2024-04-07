@@ -2,6 +2,7 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@drawable/rounded_card"
     android:layout_margin="8dp">
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,12 +20,17 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Name:"
+                android:text="Name: "
+                android:textColor="@color/black"
+                android:textSize="20dp"
                 android:textStyle="bold"/>
 
             <!-- TextView for Name -->
             <TextView
                 android:id="@+id/nameid"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
@@ -39,12 +45,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sport:"
+                android:text="Sport: "
+                android:textSize="17dp"
                 android:textStyle="bold"/>
 
             <!-- TextView for Sport -->
             <TextView
                 android:id="@+id/sportid"
+                android:textSize="17dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
@@ -59,12 +67,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Country:"
+                android:textSize="17dp"
+                android:text="Country: "
                 android:textStyle="bold"/>
 
             <!-- TextView for Country -->
             <TextView
                 android:id="@+id/countryid"
+                android:textSize="17dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
@@ -79,13 +89,15 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Personal Best:"
+                android:textSize="17dp"
+                android:text="Personal Best: "
                 android:textStyle="bold"/>
 
             <!-- TextView for Personal Best -->
             <TextView
                 android:id="@+id/personalBestid"
                 android:layout_width="wrap_content"
+                android:textSize="17dp"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
 
@@ -95,18 +107,23 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <!-- Label for Facts -->
             <TextView
+                android:id="@+id/label_facts"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Facts:"
+                android:textSize="17dp"
+                android:text="Facts: "
                 android:textStyle="bold"/>
 
             <!-- TextView for Facts -->
             <TextView
                 android:id="@+id/factsid"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:textSize="17dp"
+                android:layout_below="@id/label_facts"
+                android:layout_marginStart="8dp" />
+
         </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>
