@@ -19,15 +19,14 @@
             android:orientation="vertical">
 
         <!-- Tab layout -->
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#FFFFFF"
-            app:tabMode="scrollable"
-            app:tabTextColor="@android:color/black"
-            app:tabIndicatorColor="@android:color/holo_blue_bright"
-            tools:ignore="MissingConstraints" />
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tab_border"  app:tabMode="scrollable"
+                app:tabTextColor="@android:color/black"
+                app:tabIndicatorColor="@android:color/holo_blue_bright"
+                tools:ignore="MissingConstraints" />
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/viewPager"

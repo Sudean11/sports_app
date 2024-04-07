@@ -47,9 +47,9 @@ class MainActivity : AppCompatActivity() {
 
         navView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
-                R.id.navigation_sports -> viewPager.currentItem = 0
+                R.id.navigation_sports -> viewPager.currentItem = 1
                 R.id.navigation_events -> viewPager.currentItem = 3
-                R.id.navigation_historical_archives -> viewPager.currentItem = 6
+                R.id.navigation_historical_archives -> viewPager.currentItem = 4
             }
             true
         }

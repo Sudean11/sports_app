@@ -13,7 +13,9 @@
         android:layout_height="wrap_content"
         android:text="Add New Athlete"
         android:textSize="20sp"
-        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:gravity="left"
         android:padding="16dp"/>
 
     <!-- Name CardView -->
@@ -27,7 +29,7 @@
             android:id="@+id/editTextAthleteName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Athlete Name"
+            android:hint="Athlete's Name"
             android:background="@android:color/transparent"
             android:padding="8dp"/>
     </androidx.cardview.widget.CardView>
@@ -43,7 +45,7 @@
             android:id="@+id/editTextAthleteSport"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Athlete Sport"
+            android:hint="Main Competing Sport"
             android:background="@android:color/transparent"
             android:padding="8dp"/>
     </androidx.cardview.widget.CardView>
@@ -59,7 +61,7 @@
             android:id="@+id/editTextAthleteCountry"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Athlete Country"
+            android:hint="Country of Origin"
             android:background="@android:color/transparent"
             android:padding="8dp"/>
     </androidx.cardview.widget.CardView>
@@ -80,6 +82,22 @@
             android:padding="8dp"/>
     </androidx.cardview.widget.CardView>
 
+    <!-- Personal Best CardView -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_view_border"
+        android:layout_margin="16dp">
+
+        <EditText
+            android:id="@+id/medals_awards"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Number of Medals Awarded"
+            android:background="@android:color/transparent"
+            android:padding="8dp"/>
+    </androidx.cardview.widget.CardView>
+
     <!-- Facts CardView -->
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -91,7 +109,8 @@
             android:id="@+id/editTextFacts"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Facts"
+            android:hint="Interesting Facts"
+            android:lines="5"
             android:background="@android:color/transparent"
             android:padding="8dp"/>
     </androidx.cardview.widget.CardView>

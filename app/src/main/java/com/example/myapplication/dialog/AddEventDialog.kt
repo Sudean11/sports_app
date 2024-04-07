@@ -28,12 +28,12 @@ class AddEventDialog: DialogFragment() {
 
         // Initialize views
         val editTextAthleteName = view.findViewById<EditText>(R.id.event_name)
-        val editTextAthleteSport = view.findViewById<EditText>(R.id.event_date)
         val editTextAthleteCountry = view.findViewById<EditText>(R.id.event_description)
         val btnCancelAthlete = view.findViewById<TextView>(R.id.event_btn_cancel)
         val btnAddAthlete = view.findViewById<TextView>(R.id.events_btn_add)
 
 
+        val editTextAthleteSport = view.findViewById<EditText>(R.id.event_date)
 
         dateSetListener = DatePickerDialog.OnDateSetListener { _: DatePicker, year: Int, month: Int, dayOfMonth: Int ->
             // Update the selected date text view when the user selects a date
@@ -41,8 +41,7 @@ class AddEventDialog: DialogFragment() {
             editTextAthleteSport.setText(selectedDate)
         }
 
-
-        editTextAthleteSport.setOnClickListener(View.OnClickListener {
+        editTextAthleteSport.onFocusChangeListener = View.OnFocusChangeListener { _, hasFocus ->
             val calendar = Calendar.getInstance()
             val year = calendar.get(Calendar.YEAR)
             val month = calendar.get(Calendar.MONTH)
@@ -50,6 +49,29 @@ class AddEventDialog: DialogFragment() {
 
             // Create DatePickerDialog and show it
             val datePickerDialog = context?.let { it1 ->
+
+                DatePickerDialog(
+                    it1,
+                    dateSetListener,
+                    year,
+                    month,
+                    dayOfMonth
+                )
+            }
+            datePickerDialog?.show()
+        }
+
+
+        editTextAthleteSport.setOnClickListener(View.OnClickListener {
+            it.requestFocus()
+            val calendar = Calendar.getInstance()
+            val year = calendar.get(Calendar.YEAR)
+            val month = calendar.get(Calendar.MONTH)
+            val dayOfMonth = calendar.get(Calendar.DAY_OF_MONTH)
+
+            // Create DatePickerDialog and show it
+            val datePickerDialog = context?.let { it1 ->
+
                 DatePickerDialog(
                     it1,
                     dateSetListener,

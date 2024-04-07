@@ -3,18 +3,17 @@ package com.example.myapplication.dialog
 import android.app.Dialog
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
 import com.example.myapplication.R
 import com.example.myapplication.data.AthletesList.Companion.athletesList
-import com.example.myapplication.data.NewsList
 import com.example.myapplication.model.AthletesModel
-import com.example.myapplication.model.NewsModel
+import com.example.myapplication.recyclerview.viewholder.adapter.AthletesAdapter
 
-class AddAthleteDialogFragment: DialogFragment() {
+class AddAthleteDialogFragment(private val adapter: AthletesAdapter) : DialogFragment() {
+
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val inflater = LayoutInflater.from(requireContext())
         val view = inflater.inflate(R.layout.add_athlete, null)
@@ -43,6 +42,7 @@ class AddAthleteDialogFragment: DialogFragment() {
             val personalBest = editTextPersonalBest.text.toString()
             val facts = editTextFacts.text.toString()
             athletesList.add(AthletesModel(athleteName, athleteSport, athleteCountry, personalBest, facts))
+            adapter.notifyDataSetChanged()
             dismiss()
         }
 

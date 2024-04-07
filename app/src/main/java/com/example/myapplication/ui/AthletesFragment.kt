@@ -4,19 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.data.AthletesList.Companion.athletesList
-import com.example.myapplication.data.NewsList
-import com.example.myapplication.databinding.FragmentDashboardBinding
 import com.example.myapplication.databinding.FragmentNewsBinding
 import com.example.myapplication.dialog.AddAthleteDialogFragment
-import com.example.myapplication.dialog.AddNewsDialogFragment
 import com.example.myapplication.recyclerview.viewholder.adapter.AthletesAdapter
-import com.example.myapplication.recyclerview.viewholder.adapter.NewsAdapter
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class AthletesFragment : Fragment() {
@@ -45,7 +39,7 @@ class AthletesFragment : Fragment() {
         val floatingActionButton: FloatingActionButton = binding.fabNewNews
 
         floatingActionButton.setOnClickListener(View.OnClickListener {
-            val addSportDialog = AddAthleteDialogFragment()
+            val addSportDialog = AddAthleteDialogFragment(adapter)
             addSportDialog.show(requireActivity().supportFragmentManager, "AddSportDialog")
         })
 

@@ -13,27 +13,7 @@ class AthletesList {
                     "9.58 seconds (100m)",
                     "Won 8 Olympic gold medals"
                 ),
-                AthletesModel(
-                    "Simone Biles",
-                    "Gymnastics",
-                    "United States",
-                    "4 golds, 1 bronze (Rio 2016)",
-                    "Considered one of the greatest gymnasts of all time"
-                ),
-                AthletesModel(
-                    "Michael Phelps",
-                    "Swimming",
-                    "United States",
-                    "23 Olympic gold medals",
-                    "Most decorated Olympian of all time"
-                ),
-                AthletesModel(
-                    "Serena Williams",
-                    "Tennis",
-                    "United States",
-                    "23 Grand Slam singles titles",
-                    "Regarded as one of the greatest tennis players of all time"
-                ),
+
                 AthletesModel(
                     "Cristiano Ronaldo",
                     "Football",
